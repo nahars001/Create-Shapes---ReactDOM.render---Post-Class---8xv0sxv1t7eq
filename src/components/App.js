@@ -5,7 +5,11 @@ const App = () => {
   return (
     <div id="main">
       <div id="shape-creator">
-        <h1>Nahar </h1>
+       <select> 
+          <option value="Square">Square </option>
+          <option value="Circle" >Circle </option>
+          <button > Add Shape</button>
+       </select>
 
       </div>
       <div id="shapes-holder">
