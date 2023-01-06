@@ -9,7 +9,7 @@ function Creater(props) {
     ));
     // the div with children inside
     return (
-        React.createElement("div", { className: "shapes-holder" },
+        React.createElement("div", { id: "shapes-holder" },
             children
         )
     );
