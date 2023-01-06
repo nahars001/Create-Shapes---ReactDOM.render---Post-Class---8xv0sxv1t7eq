@@ -5,7 +5,7 @@ const App = () => {
   return (
     <div id="main">
       <div id="shape-creator">
-        
+        <h1>Nahar </h1>
 
       </div>
       <div id="shapes-holder">
