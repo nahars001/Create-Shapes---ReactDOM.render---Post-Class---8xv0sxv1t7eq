@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import '../styles/App.css';
-import Creater from './Creater';
+
 const App = () => {
   const [selectedShape, setSelectedShape] = useState("square");
   const [myData , setMydata] = useState([]);
   const[value , setValue] = useState(0);
   
-  let children ;
+
  const  buttonClickHandler = ()=> {
    setValue((prev) => prev++);
         setMydata((prevstate) => {
@@ -36,6 +36,11 @@ const App = () => {
      setSelectedShape(e.target.value);
     
   }
+  const children = myData.map((val) => (
+    React.createElement("div",
+      { id: val["key"], className: val["shape"] },
+      val["key"])
+  ));
 
   return (
     <div id="main">
@@ -47,8 +52,10 @@ const App = () => {
         </select> 
         <button onClick={buttonClickHandler} > Add Shape</button>
 
-      </div>
-      <Creater data={myData}></Creater>
+      </div>{
+      React.createElement("div", {id: "shapes-holder" },
+      children
+      )}
     </div>
   )
 }
